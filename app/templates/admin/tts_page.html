@@ -1,0 +1,15 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+  <h1>Text to Speech</h1>
+
+  <form method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="button btn-primary">Generate Speech</button>
+  </form>
+
+  {% if success %}
+    <p style="color: green; font-weight: bold;">{{ success }}</p>
+  {% endif %}
+{% endblock %}

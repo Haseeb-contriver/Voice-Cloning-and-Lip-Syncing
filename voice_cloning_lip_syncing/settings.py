@@ -31,13 +31,32 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app',
 ]
+JAZZMIN_SETTINGS = {
+    "site_title": "Voice Cloning Admin",
+    "site_header": "Voice Cloning & Lip Syncing",
+    "welcome_sign": "Welcome to the AI Portal",
+
+
+    # Sidebar custom links
+    "custom_links": {
+        "app": [   # <-- yahan "app" ko tumhare app ka naam likhna hai (jaise "core")
+            {
+                "name": "Text to Speech",
+                "url": "admin:tts_page",   # 👈 isko hum step 3 me banayenge
+                "icon": "fas fa-microphone",  # FontAwesome icon
+            },
+        ]
+    },
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -54,7 +73,7 @@ ROOT_URLCONF = 'voice_cloning_lip_syncing.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
