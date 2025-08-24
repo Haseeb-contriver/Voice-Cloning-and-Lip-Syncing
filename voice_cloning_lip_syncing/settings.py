@@ -55,7 +55,7 @@ JAZZMIN_SETTINGS = {
     "custom_links": {
         "app": [   # <-- yahan "app" ko tumhare app ka naam likhna hai (jaise "core")
             {
-                "name": "Text to Speech",
+                "name": "Speech to Text",
                 "url": "admin:tts_page",   # 👈 isko hum step 3 me banayenge
                 "icon": "fas fa-microphone",  # FontAwesome icon
             },
