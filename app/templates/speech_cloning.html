@@ -1,0 +1,12 @@
+<!-- templates/speech_cloning.html -->
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+<h1>🎙️ Speech Cloning</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <label>Enter Text:</label>
+  <input type="text" name="text" class="form-control" required>
+  <button type="submit" class="btn btn-primary mt-2">Generate Speech</button>
+</form>
+{% endblock %}

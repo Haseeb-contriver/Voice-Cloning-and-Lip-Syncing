@@ -24,6 +24,11 @@ SECRET_KEY = 'django-insecure-)cwd_3h8ql0umarq6d@4*g8&m$_&@dd$__n5u^lkvcdt+z3q5)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+from dotenv import load_dotenv
+load_dotenv()
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 ALLOWED_HOSTS = []
 
@@ -53,6 +58,12 @@ JAZZMIN_SETTINGS = {
                 "name": "Text to Speech",
                 "url": "admin:tts_page",   # 👈 isko hum step 3 me banayenge
                 "icon": "fas fa-microphone",  # FontAwesome icon
+            },
+            {
+                "name": "Speech Cloning",
+                "url": "speech_cloning", # must match urls.py name
+                "icon": "fas fa-microphone",
+                "permissions": ["auth.view_user"], # or remove permissions to show to all admin users
             },
         ]
     },

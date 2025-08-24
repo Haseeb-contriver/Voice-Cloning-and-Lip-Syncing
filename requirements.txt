@@ -1,4 +1,18 @@
+# Django framework
 Django>=4.2,<5.0
-django-jazzmin>=2.6.0
-requests>=2.31.0
 
+# Admin UI Jazzmin (agar tum use kar rahe ho)
+django-jazzmin>=2.6.0
+
+# Audio conversion (optional - agar WAV -> MP3 chahiye)
+pydub>=0.25.1
+
+# Env loader (for secret keys etc.)
+python-dotenv>=1.0.1
+
+# HTTP requests (agar external APIs bhi use karna ho)
+requests>=2.32.3
+
+soundfile>=0.12.1
+gtts
+pyttsx3
